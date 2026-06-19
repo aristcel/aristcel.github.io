@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Услуги и цены — ARISTCEL</title>
+<meta name="description" content="OSINT, Threat Intelligence, OPSEC и Information Security. Полный прайс-лист услуг Aristcel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-en">
+
+<div class="stripes" aria-hidden="true"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">ARISTCEL</a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html"><span data-lang="ru">Главная</span><span data-lang="en">Home</span></a></li>
+    <li><a href="about.html"><span data-lang="ru">Обо мне</span><span data-lang="en">About</span></a></li>
+    <li><a href="services.html" class="current"><span data-lang="ru">Услуги и цены</span><span data-lang="en">Services & Rates</span></a></li>
+    <li><a href="contact.html"><span data-lang="ru">Контакты</span><span data-lang="en">Contact</span></a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Menu" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="lang-toggle" role="group" aria-label="Language">
+    <button class="lang-btn"        onclick="setLang('ru')" aria-pressed="false">RU</button>
+    <button class="lang-btn active" onclick="setLang('en')" aria-pressed="true">EN</button>
+  </div>
+</nav>
+
+<div class="page-hero" id="top">
+  <p class="page-hero-eyebrow">
+    <span data-lang="ru">Прайс-лист</span>
+    <span data-lang="en">Rate Card</span>
+  </p>
+  <h1 class="page-hero-title">
+    <span data-lang="ru">УСЛУГИ <span class="ol">И ЦЕНЫ</span></span>
+    <span data-lang="en">SERVICES <span class="ol">& RATES</span></span>
+  </h1>
+  <p class="page-hero-sub">
+    <span data-lang="ru">OSINT · Threat Intelligence · OPSEC · Information Security</span>
+    <span data-lang="en">OSINT · Threat Intelligence · OPSEC · Information Security</span>
+  </p>
+</div>
+
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">OSINT <span class="msep">◈</span> THREAT INTELLIGENCE <span class="msep">◈</span> OPSEC <span class="msep">◈</span> INFORMATION SECURITY <span class="msep">◈</span> DUE DILIGENCE <span class="msep">◈</span> RISK ASSESSMENT <span class="msep">◈</span> REPORTING <span class="msep">◈</span> ARISTCEL <span class="msep">◈</span></span>
+    <span class="marquee-item">OSINT <span class="msep">◈</span> THREAT INTELLIGENCE <span class="msep">◈</span> OPSEC <span class="msep">◈</span> INFORMATION SECURITY <span class="msep">◈</span> DUE DILIGENCE <span class="msep">◈</span> RISK ASSESSMENT <span class="msep">◈</span> REPORTING <span class="msep">◈</span> ARISTCEL <span class="msep">◈</span></span>
+  </div>
+</div>
+
+<section id="pricing">
+
+  <div class="pricing-note">
+    <span>
+      <span data-lang="ru">Все цены указаны в евро (€) и являются стартовыми — итоговая стоимость зависит от объёма и сложности задачи.</span>
+      <span data-lang="en">All prices are listed in euros (€) and represent starting rates — final cost depends on project scope and complexity.</span>
+    </span>
+    <span class="urgent">
+      <span data-lang="ru">⚠ Срочные проекты: <strong>от 1.5× стандартной ставки</strong></span>
+      <span data-lang="en">⚠ Urgent projects: <strong>from 1.5× standard rate</strong></span>
+    </span>
+  </div>
+
+  <p class="s-label">
+    <span data-lang="ru">Готовые пакеты</span>
+    <span data-lang="en">Packages</span>
+  </p>
+  <p class="packages-intro">
+    <span data-lang="ru">Для типовых задач — три сформированных пакета. Для нестандартных случаев услуги ниже можно комбинировать индивидуально.</span>
+    <span data-lang="en">For common use cases — three pre-defined packages. For non-standard cases, the services listed below can be combined individually.</span>
+  </p>
+
+  <div class="packages-grid">
+
+    <div class="package-card">
+      <div class="package-badge"><span data-lang="ru">Пакет 01</span><span data-lang="en">Package 01</span></div>
+      <div class="package-name">BASIC</div>
+      <div class="package-tagline"><span data-lang="ru">Быстрая проверка одного объекта</span><span data-lang="en">Fast check on a single subject</span></div>
+      <div class="package-price"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€350</div>
+      <div class="package-divider"></div>
+      <ul class="package-includes">
+        <li><span data-lang="ru">Сбор информации из открытых источников</span><span data-lang="en">Open source information collection</span></li>
+        <li><span data-lang="ru">Анализ цифрового следа</span><span data-lang="en">Digital footprint analysis</span></li>
+        <li><span data-lang="ru">Краткая аналитическая справка</span><span data-lang="en">Executive intelligence brief</span></li>
+      </ul>
+      <div class="package-for">
+        <span data-lang="ru">Для: <strong>предварительной проверки</strong> человека или организации перед сделкой, наймом или знакомством</span>
+        <span data-lang="en">For: <strong>preliminary screening</strong> of a person or organization before a deal, hire, or introduction</span>
+      </div>
+    </div>
+
+    <div class="package-card featured">
+      <div class="package-badge"><span class="star">★</span><span data-lang="ru">Пакет 02 · популярный</span><span data-lang="en">Package 02 · popular</span></div>
+      <div class="package-name">STANDARD</div>
+      <div class="package-tagline"><span data-lang="ru">Комплексная проверка с анализом связей</span><span data-lang="en">Comprehensive check with link analysis</span></div>
+      <div class="package-price"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€900</div>
+      <div class="package-divider"></div>
+      <ul class="package-includes">
+        <li><span data-lang="ru">Due Diligence (физлицо или компания)</span><span data-lang="en">Due diligence (individual or company)</span></li>
+        <li><span data-lang="ru">Расследование в социальных сетях</span><span data-lang="en">Social media investigation</span></li>
+        <li><span data-lang="ru">Анализ связей (Link Analysis)</span><span data-lang="en">Link analysis</span></li>
+        <li><span data-lang="ru">Оценка репутации</span><span data-lang="en">Reputation assessment</span></li>
+        <li><span data-lang="ru">Стандартный аналитический отчёт</span><span data-lang="en">Standard analytical report</span></li>
+      </ul>
+      <div class="package-for">
+        <span data-lang="ru">Для: <strong>due diligence партнёров, инвесторов, контрагентов</strong> — основной запрос большинства клиентов</span>
+        <span data-lang="en">For: <strong>due diligence on partners, investors, counterparties</strong> — the most common client request</span>
+      </div>
+    </div>
+
+    <div class="package-card">
+      <div class="package-badge"><span data-lang="ru">Пакет 03</span><span data-lang="en">Package 03</span></div>
+      <div class="package-name">COMPREHENSIVE</div>
+      <div class="package-tagline"><span data-lang="ru">Полное расследование с инфраструктурой</span><span data-lang="en">Full investigation with infrastructure</span></div>
+      <div class="package-price"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€2,200</div>
+      <div class="package-divider"></div>
+      <ul class="package-includes">
+        <li><span data-lang="ru">OSINT-расследование полного цикла</span><span data-lang="en">Full-cycle OSINT investigation</span></li>
+        <li><span data-lang="ru">Атрибуция аккаунтов и псевдонимов</span><span data-lang="en">Account & alias attribution</span></li>
+        <li><span data-lang="ru">Анализ домена / IP / инфраструктуры</span><span data-lang="en">Domain / IP / infrastructure analysis</span></li>
+        <li><span data-lang="ru">Геолокационный анализ</span><span data-lang="en">Geolocation analysis</span></li>
+        <li><span data-lang="ru">Комплексный разведывательный отчёт</span><span data-lang="en">Comprehensive intelligence report</span></li>
+      </ul>
+      <div class="package-for">
+        <span data-lang="ru">Для: <strong>сложных расследований</strong> — корпоративные конфликты, мошенничество, многоуровневая верификация</span>
+        <span data-lang="en">For: <strong>complex investigations</strong> — corporate disputes, fraud cases, multi-layered verification</span>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="s-label">
+    <span data-lang="ru">Полный список услуг</span>
+    <span data-lang="en">Full Service List</span>
+  </p>
+
+  <div class="price-group">
+    <div class="price-group-head">
+      <span class="price-group-num">01</span>
+      <h2 class="price-group-title"><span data-lang="ru">OSINT</span><span data-lang="en">OSINT</span></h2>
+      <span class="price-group-sub"><span data-lang="ru">Открытая разведка</span><span data-lang="en">Open Source Intelligence</span></span>
+    </div>
+    <div class="price-list">
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Сбор информации из открытых источников</span><span data-lang="en">Open Source Information Collection</span></div>
+          <div class="price-desc"><span data-lang="ru">Сбор и структурирование общедоступной информации о физических лицах, организациях, доменах или иных объектах.</span><span data-lang="en">Collection and structuring of publicly available information on individuals, organizations, domains, or other subjects.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€150</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Анализ цифрового следа</span><span data-lang="en">Digital Footprint Analysis</span></div>
+          <div class="price-desc"><span data-lang="ru">Оценка присутствия, активности и публично раскрытой информации физического лица или организации в сети.</span><span data-lang="en">Assessment of an individual's or organization's online presence, activity, and publicly exposed information.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€250</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Расследование в социальных сетях</span><span data-lang="en">Social Media Investigation</span></div>
+          <div class="price-desc"><span data-lang="ru">Идентификация и анализ профилей в социальных сетях, моделей активности и публичных связей.</span><span data-lang="en">Identification and analysis of social media profiles, activity patterns, and public connections.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€200</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Атрибуция аккаунтов и псевдонимов</span><span data-lang="en">Account & Alias Attribution</span></div>
+          <div class="price-desc"><span data-lang="ru">Установление вероятных связей между аккаунтами, псевдонимами, именами пользователей и цифровыми идентификаторами.</span><span data-lang="en">Establishing probable links between accounts, aliases, usernames, and digital identifiers.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€500</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Анализ связей (Link Analysis)</span><span data-lang="en">Link Analysis</span></div>
+          <div class="price-desc"><span data-lang="ru">Картирование и анализ взаимосвязей между людьми, организациями, аккаунтами и цифровыми активами.</span><span data-lang="en">Mapping and analyzing relationships between people, organizations, accounts, and digital assets.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€500</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Геолокационный анализ</span><span data-lang="en">Geolocation Analysis</span></div>
+          <div class="price-desc"><span data-lang="ru">Определение местоположения на основе изображений, видео, метаданных и информации из открытых источников.</span><span data-lang="en">Location assessment based on images, videos, metadata, and open-source information.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€300</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Оценка репутации</span><span data-lang="en">Reputation Assessment</span></div>
+          <div class="price-desc"><span data-lang="ru">Выявление репутационных рисков, негативных упоминаний и значимого присутствия в сети.</span><span data-lang="en">Identification of public reputation risks, negative mentions, and relevant online exposure.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€400</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Due Diligence физического лица</span><span data-lang="en">Individual Due Diligence</span></div>
+          <div class="price-desc"><span data-lang="ru">Проверка биографических данных на основе общедоступной информации.</span><span data-lang="en">Background assessment using publicly available information.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€400</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Due Diligence компании</span><span data-lang="en">Corporate Due Diligence</span></div>
+          <div class="price-desc"><span data-lang="ru">Предварительная оценка компаний, партнёров, поставщиков и юридических лиц.</span><span data-lang="en">Preliminary assessment of companies, partners, vendors, and business entities.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€600</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">OSINT-расследование</span><span data-lang="en">OSINT Investigation</span></div>
+          <div class="price-desc"><span data-lang="ru">Комплексное разведывательное расследование со структурированными выводами и аналитическим заключением.</span><span data-lang="en">Comprehensive intelligence investigation with structured findings and analytical conclusions.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€900</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="price-group">
+    <div class="price-group-head">
+      <span class="price-group-num">02</span>
+      <h2 class="price-group-title"><span data-lang="ru">THREAT INTELLIGENCE</span><span data-lang="en">THREAT INTELLIGENCE</span></h2>
+      <span class="price-group-sub"><span data-lang="ru">Анализ угроз</span><span data-lang="en">Threat Analysis</span></span>
+    </div>
+    <div class="price-list">
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Анализ домена</span><span data-lang="en">Domain Intelligence Analysis</span></div>
+          <div class="price-desc"><span data-lang="ru">Исследование истории домена, регистрационных данных, инфраструктуры и связанных активов.</span><span data-lang="en">Research of domain history, registration data, infrastructure, and related assets.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€250</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Анализ IP и инфраструктуры</span><span data-lang="en">IP & Infrastructure Analysis</span></div>
+          <div class="price-desc"><span data-lang="ru">Оценка сетевой инфраструктуры, открытых сервисов и связанных технических индикаторов.</span><span data-lang="en">Assessment of network infrastructure, exposed services, and associated technical indicators.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€300</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Анализ внешней поверхности атаки</span><span data-lang="en">External Attack Surface Analysis</span></div>
+          <div class="price-desc"><span data-lang="ru">Выявление публично доступных активов, сервисов и потенциальных рисков безопасности.</span><span data-lang="en">Identification of publicly exposed assets, services, and potential security risks.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€600</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Отчёт Threat Intelligence</span><span data-lang="en">Threat Intelligence Report</span></div>
+          <div class="price-desc"><span data-lang="ru">Профессиональный разведывательный отчёт об угрозах, инфраструктуре, акторах или целевых секторах.</span><span data-lang="en">Professional intelligence reporting on threats, infrastructure, actors, or targeted sectors.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€700</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Анализ утечки данных</span><span data-lang="en">Data Breach Analysis</span></div>
+          <div class="price-desc"><span data-lang="ru">Исследование раскрытых или скомпрометированных данных и оценка потенциального воздействия.</span><span data-lang="en">Investigation of exposed or compromised data and assessment of potential impact.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€350</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Мониторинг угроз</span><span data-lang="en">Threat Monitoring</span></div>
+          <div class="price-desc"><span data-lang="ru">Непрерывный мониторинг угроз, упоминаний, изменений инфраструктуры и индикаторов риска.</span><span data-lang="en">Continuous monitoring of threats, mentions, infrastructure changes, and risk indicators.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€600<span class="price-suffix">/<span data-lang="ru">мес</span><span data-lang="en">mo</span></span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="price-group">
+    <div class="price-group-head">
+      <span class="price-group-num">03</span>
+      <h2 class="price-group-title"><span data-lang="ru">OPSEC</span><span data-lang="en">OPSEC</span></h2>
+      <span class="price-group-sub"><span data-lang="ru">Цифровая безопасность</span><span data-lang="en">Digital Security</span></span>
+    </div>
+    <div class="price-list">
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Аудит цифрового следа</span><span data-lang="en">Digital Footprint Audit</span></div>
+          <div class="price-desc"><span data-lang="ru">Оценка общедоступной информации и рисков раскрытия данных.</span><span data-lang="en">Evaluation of publicly accessible information and exposure risks.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€250</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">OPSEC-аудит</span><span data-lang="en">OPSEC Audit</span></div>
+          <div class="price-desc"><span data-lang="ru">Оценка практик операционной безопасности, каналов коммуникации и цифровых привычек.</span><span data-lang="en">Assessment of operational security practices, communication channels, and digital habits.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€500</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">План повышения безопасности</span><span data-lang="en">Security Improvement Plan</span></div>
+          <div class="price-desc"><span data-lang="ru">Персонализированные рекомендации по снижению раскрытия данных и улучшению уровня безопасности.</span><span data-lang="en">Personalized recommendations to reduce exposure and improve security posture.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€400</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">OPSEC-консультация</span><span data-lang="en">OPSEC Consultation</span></div>
+          <div class="price-desc"><span data-lang="ru">Профессиональная консультация по вопросам приватности, анонимности и операционной безопасности.</span><span data-lang="en">Professional consultation on privacy, anonymity, and operational security concerns.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€100</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="price-group">
+    <div class="price-group-head">
+      <span class="price-group-num">04</span>
+      <h2 class="price-group-title"><span data-lang="ru">INFORMATION SECURITY</span><span data-lang="en">INFORMATION SECURITY</span></h2>
+      <span class="price-group-sub"><span data-lang="ru">Информационная безопасность</span><span data-lang="en">Information Security</span></span>
+    </div>
+    <div class="price-list">
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Консультация по информационной безопасности</span><span data-lang="en">Information Security Consultation</span></div>
+          <div class="price-desc"><span data-lang="ru">Экспертное сопровождение по кибербезопасности, управлению рисками и лучшим практикам.</span><span data-lang="en">Expert guidance on cybersecurity, risk management, and security best practices.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€100</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Базовая оценка безопасности</span><span data-lang="en">Basic Security Assessment</span></div>
+          <div class="price-desc"><span data-lang="ru">Обзор средств контроля безопасности, конфигураций и типичных слабых мест.</span><span data-lang="en">Review of security controls, configurations, and common weaknesses.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€700</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Оценка рисков безопасности</span><span data-lang="en">Security Risk Assessment</span></div>
+          <div class="price-desc"><span data-lang="ru">Выявление и оценка потенциальных угроз безопасности и уязвимостей.</span><span data-lang="en">Identification and evaluation of potential security threats and vulnerabilities.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€500</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Абонентское сопровождение по безопасности</span><span data-lang="en">Security Advisory Retainer</span></div>
+          <div class="price-desc"><span data-lang="ru">Постоянное консультационное и аналитическое сопровождение по вопросам безопасности.</span><span data-lang="en">Ongoing consulting and analytical support for security-related matters.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€800<span class="price-suffix">/<span data-lang="ru">мес</span><span data-lang="en">mo</span></span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="price-group">
+    <div class="price-group-head">
+      <span class="price-group-num">05</span>
+      <h2 class="price-group-title"><span data-lang="ru">ОТЧЁТЫ</span><span data-lang="en">REPORTS</span></h2>
+      <span class="price-group-sub"><span data-lang="ru">Отчёты и документация</span><span data-lang="en">Reports & Documentation</span></span>
+    </div>
+    <div class="price-list">
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Краткая аналитическая справка</span><span data-lang="en">Executive Intelligence Brief</span></div>
+          <div class="price-desc"><span data-lang="ru">Сжатое аналитическое резюме с ключевыми выводами и заключениями.</span><span data-lang="en">Concise analytical summary with key findings and conclusions.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€200</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Стандартный аналитический отчёт</span><span data-lang="en">Standard Analytical Report</span></div>
+          <div class="price-desc"><span data-lang="ru">Структурированный отчёт, содержащий выводы, анализ и подтверждающую информацию.</span><span data-lang="en">Structured report containing findings, analysis, and supporting information.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€500</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Комплексный разведывательный отчёт</span><span data-lang="en">Comprehensive Intelligence Report</span></div>
+          <div class="price-desc"><span data-lang="ru">Углублённый аналитический отчёт с расширенным исследованием и выводами.</span><span data-lang="en">In-depth analytical report with extensive research and conclusions.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€1,000</div>
+      </div>
+
+      <div class="price-row">
+        <div>
+          <div class="price-name"><span data-lang="ru">Отчёт по анализу связей</span><span data-lang="en">Link Analysis Report</span></div>
+          <div class="price-desc"><span data-lang="ru">Детальный отчёт, включающий картирование связей и визуальный анализ взаимоотношений.</span><span data-lang="en">Detailed report including relationship mapping and visual link analysis.</span></div>
+        </div>
+        <div class="price-value"><span class="from"><span data-lang="ru">от</span><span data-lang="en">from</span></span>€1,200</div>
+      </div>
+
+    </div>
+
+    <p class="price-closing">
+      <span data-lang="ru">Итоговая стоимость зависит от <strong>объёма проекта, сложности, срочности</strong> и конкретных требований заказчика. Перед началом работы согласовывается техническое задание и фиксированная стоимость или почасовая ставка.</span>
+      <span data-lang="en">Final pricing depends on <strong>project scope, complexity, urgency,</strong> and specific requirements. Before work begins, the scope and either a fixed price or hourly rate are agreed upon.</span>
+    </p>
+
+    <div class="legal-note">
+      <div class="legal-note-icon" aria-hidden="true">⚖</div>
+      <div class="legal-note-text">
+        <span data-lang="ru">Все услуги выполняются исключительно с использованием <strong>законных методов и общедоступных источников информации</strong>, в соответствии с применимым законодательством. Работа не включает несанкционированный доступ к системам, взлом, перехват данных или иные противоправные действия. Расследования проводятся в этичных рамках OSINT-методологии; результаты предоставляются заказчику для законного использования (due diligence, оценка рисков, верификация контрагентов и т.п.).</span>
+        <span data-lang="en">All services are performed exclusively using <strong>lawful methods and publicly available sources of information</strong>, in accordance with applicable law. Work does not include unauthorized system access, hacking, data interception, or any other unlawful activity. Investigations are conducted within the ethical bounds of OSINT methodology; deliverables are provided to the client for lawful use (due diligence, risk assessment, counterparty verification, and similar purposes).</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<div class="cta-band">
+  <div class="cta-text">
+    <span data-lang="ru">Обсудим<br>ваш проект?</span>
+    <span data-lang="en">Let's discuss<br>your project</span>
+  </div>
+  <div style="display:flex; gap:14px; flex-wrap:wrap;">
+    <a href="https://t.me/Aristcel" target="_blank" rel="noopener noreferrer" class="cta-btn">Telegram</a>
+    <a href="about.html" class="cta-btn ghost"><span data-lang="ru">Обо мне</span><span data-lang="en">About me</span></a>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <a href="index.html" class="footer-mark">ARISTCEL</a>
+    <div class="footer-sub">
+      OSINT RESEARCHER · CYBERSECURITY · INTELLIGENCE RESEARCH<br>
+      INTERNAL ARCHIVE · DEBIAN LINUX · CERTIFIED TO DIG<br>
+      © ARISTCEL — ALL RIGHTS RESERVED
+    </div>
+  </div>
+  <div class="footer-right">
+    <a href="index.html"><span data-lang="ru">ГЛАВНАЯ</span><span data-lang="en">HOME</span></a><br>
+    <a href="about.html"><span data-lang="ru">ОБО МНЕ</span><span data-lang="en">ABOUT</span></a><br>
+    <a href="contact.html"><span data-lang="ru">КОНТАКТЫ</span><span data-lang="en">CONTACT</span></a><br>
+    <a href="https://github.com/aristcel" target="_blank" rel="noopener noreferrer">GITHUB</a>
+  </div>
+</footer>
+
+<script src="lang.js"></script>
+</body>
+</html>

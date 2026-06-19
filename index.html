@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARISTCEL — независимый исследователь OSINT и кибербезопасности</title>
+<meta name="description" content="Aristcel — независимый исследователь OSINT и кибербезопасности. Интернет-разведка, анализ угроз, исследование инфраструктуры.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .hero {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: calc(var(--nav-h) + 24px) 52px 72px;
+    overflow: hidden;
+  }
+  .hero-ghost {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -52%);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(120px, 18vw, 280px);
+    letter-spacing: -0.01em;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.045);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+  }
+  .hero-stamp {
+    position: absolute;
+    top: calc(var(--nav-h) + 36px);
+    right: 52px;
+    width: 112px;
+    height: 112px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 14px;
+  }
+  .stamp-glyph { font-size: 16px; margin-bottom: 7px; opacity: 0.4; }
+  .stamp-text {
+    font-family: 'Space Mono', monospace;
+    font-size: 7px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--mid);
+    line-height: 1.8;
+  }
+  .hero-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 24px;
+  }
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 7vw, 100px);
+    line-height: 1.05;
+    letter-spacing: 0.025em;
+    margin-bottom: 32px;
+  }
+  .hero-title .ol { -webkit-text-stroke: 1px var(--off-white); color: transparent; }
+  .hero-body {
+    max-width: 500px;
+    color: var(--mid);
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+  .hero-actions a {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 16px 30px;
+    border: 1px solid var(--off-white);
+    color: var(--off-white);
+    transition: background 0.18s, color 0.18s;
+    white-space: nowrap;
+  }
+  .hero-actions a.solid { background: var(--off-white); color: var(--black); }
+  .hero-actions a.solid:hover { background: transparent; color: var(--off-white); }
+  .hero-actions a:not(.solid):hover { background: var(--off-white); color: var(--black); }
+  .hero-rule {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+  }
+  .hero-rule::before, .hero-rule::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+
+  .teaser-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .teaser-card {
+    background: var(--card);
+    padding: 44px 36px 40px;
+    text-decoration: none;
+    color: var(--off-white);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.18s;
+    display: block;
+  }
+  .teaser-card:hover { background: #161616; }
+  .teaser-ghost {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 90px;
+    color: rgba(255,255,255,0.022);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .teaser-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 7.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.22);
+    margin-bottom: 20px;
+  }
+  .teaser-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 34px;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .teaser-desc {
+    font-size: 12px;
+    color: var(--mid);
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+  .teaser-arrow {
+    font-size: 18px;
+    color: var(--mid);
+    transition: transform 0.18s, color 0.18s;
+    display: inline-block;
+  }
+  .teaser-card:hover .teaser-arrow { transform: translate(4px, -4px); color: var(--off-white); }
+
+  @media (max-width: 900px) {
+    .hero { padding: calc(var(--nav-h) + 16px) 24px 56px; }
+    .hero-stamp { display: none; }
+  }
+  @media (max-width: 700px) {
+    .teaser-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    .hero { padding: calc(var(--nav-h) + 12px) 16px 40px; }
+    .hero-eyebrow { font-size: 8.5px; margin-bottom: 16px; }
+    .hero-title { margin-bottom: 20px; }
+    .hero-body { margin-bottom: 28px; }
+    .hero-actions { gap: 12px; }
+    .hero-actions a { padding: 14px 22px; font-size: 9px; }
+    .hero-rule { font-size: 7.5px; }
+    .teaser-card { padding: 32px 20px; }
+    .teaser-title { font-size: 28px; }
+  }
+</style>
+</head>
+<body class="lang-en">
+
+<div class="stripes" aria-hidden="true"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">ARISTCEL</a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html" class="current"><span data-lang="ru">Главная</span><span data-lang="en">Home</span></a></li>
+    <li><a href="about.html"><span data-lang="ru">Обо мне</span><span data-lang="en">About</span></a></li>
+    <li><a href="services.html"><span data-lang="ru">Услуги и цены</span><span data-lang="en">Services & Rates</span></a></li>
+    <li><a href="contact.html"><span data-lang="ru">Контакты</span><span data-lang="en">Contact</span></a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Menu" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="lang-toggle" role="group" aria-label="Language">
+    <button class="lang-btn"        onclick="setLang('ru')" aria-pressed="false">RU</button>
+    <button class="lang-btn active" onclick="setLang('en')" aria-pressed="true">EN</button>
+  </div>
+</nav>
+
+<div class="hero" id="top">
+  <div class="hero-ghost" aria-hidden="true">ARISTCEL</div>
+
+  <div class="hero-stamp" aria-hidden="true">
+    <div class="stamp-glyph">◈</div>
+    <div class="stamp-text">
+      <span data-lang="ru">сертифицирован<br>копать<br>изощрённо<br>скрытно</span>
+      <span data-lang="en">certified<br>to dig<br>deviously<br>discreet</span>
+    </div>
+  </div>
+
+  <p class="hero-eyebrow">
+    <span data-lang="ru">OSINT · Кибербезопасность · Разведка</span>
+    <span data-lang="en">OSINT · Cybersecurity · Intelligence Research</span>
+  </p>
+
+  <h1 class="hero-title">
+    <span data-lang="ru">ДОБРО<br>ПОЖАЛОВАТЬ<br>НА <span class="ol">ДРУГУЮ</span><br>СТОРОНУ</span>
+    <span data-lang="en">WELCOME<br>TO THE<br><span class="ol">OTHER</span><br>SIDE</span>
+  </h1>
+
+  <p class="hero-body">
+    <span data-lang="ru">Независимый исследователь в области интернет-разведки и кибербезопасности. Исследование цифровой инфраструктуры, анализ угроз и корреляция данных из открытых источников. Информация — это не данные. Это следы.</span>
+    <span data-lang="en">Independent practitioner in the field of open-source intelligence and cybersecurity. Digital infrastructure research, threat analysis, and correlation of open-source data. Information is not data. It is traces.</span>
+  </p>
+
+  <div class="hero-actions">
+    <a href="services.html" class="solid"><span data-lang="ru">Услуги и цены</span><span data-lang="en">Services & Rates</span></a>
+    <a href="about.html"><span data-lang="ru">Подробнее обо мне</span><span data-lang="en">More about me</span></a>
+  </div>
+
+  <div class="hero-rule">
+    <span data-lang="ru">Передовые технологии разведки</span>
+    <span data-lang="en">Advanced intelligence technology</span>
+  </div>
+</div>
+
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">OSINT INFRASTRUCTURE <span class="msep">◈</span> DIGITAL FOOTPRINTS <span class="msep">◈</span> THREAT ANALYSIS <span class="msep">◈</span> NETWORK RECONNAISSANCE <span class="msep">◈</span> OPEN SOURCE INTELLIGENCE <span class="msep">◈</span> CYBERSECURITY RESEARCH <span class="msep">◈</span> LINUX · DEBIAN <span class="msep">◈</span> DATA CORRELATION <span class="msep">◈</span> ARISTCEL <span class="msep">◈</span></span>
+    <span class="marquee-item">OSINT INFRASTRUCTURE <span class="msep">◈</span> DIGITAL FOOTPRINTS <span class="msep">◈</span> THREAT ANALYSIS <span class="msep">◈</span> NETWORK RECONNAISSANCE <span class="msep">◈</span> OPEN SOURCE INTELLIGENCE <span class="msep">◈</span> CYBERSECURITY RESEARCH <span class="msep">◈</span> LINUX · DEBIAN <span class="msep">◈</span> DATA CORRELATION <span class="msep">◈</span> ARISTCEL <span class="msep">◈</span></span>
+  </div>
+</div>
+
+<section id="about">
+  <p class="s-label">
+    <span data-lang="ru">О специалисте</span>
+    <span data-lang="en">Professional Profile</span>
+  </p>
+  <div class="about-grid">
+    <div>
+      <h2 class="about-headline">
+        <span data-lang="ru">ОСМЕЛЬСЯ<br><span class="ol">КОПАТЬ</span></span>
+        <span data-lang="en">DARE<br>TO<br><span class="ol">DIG</span></span>
+      </h2>
+      <div class="about-body">
+        <div data-lang="ru">
+          <p>Aristcel — независимый исследователь в области <strong>открытых источников информации (OSINT)</strong> и кибербезопасности. Деятельность охватывает систематический сбор, верификацию и анализ данных из общедоступных источников с целью формирования структурированной разведывательной картины.</p>
+          <p>Профессиональный интерес сосредоточен на технической стороне цифровой среды: архитектуре сетей и систем, взаимодействии инфраструктурных компонентов, выявлении точек уязвимости. Приоритет — аналитический и системный подход.</p>
+          <p><a href="about.html" style="color:var(--off-white); text-decoration:underline; text-underline-offset:4px;"><span data-lang="ru">Подробнее о пути и опыте →</span><span data-lang="en">More on background and experience →</span></a></p>
+        </div>
+        <div data-lang="en">
+          <p>Aristcel is an independent researcher specialising in <strong>open-source intelligence (OSINT)</strong> and cybersecurity. The scope of practice encompasses systematic collection, verification, and analysis of data from publicly available sources in order to construct a structured intelligence picture.</p>
+          <p>Professional focus is concentrated on the technical dimension of the digital environment: network and system architecture, infrastructure interactions, and identification of vulnerability points. Priority is given to an analytical, systemic approach.</p>
+          <p><a href="about.html" style="color:var(--off-white); text-decoration:underline; text-underline-offset:4px;">More on background and experience →</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="metrics">
+      <div class="metric">
+        <div class="metric-val">3+</div>
+        <div class="metric-lbl"><span data-lang="ru">лет в сфере<br>интернет-разведки</span><span data-lang="en">years in open-source<br>intelligence</span></div>
+      </div>
+      <div class="metric">
+        <div class="metric-val">2</div>
+        <div class="metric-lbl"><span data-lang="ru">года системной<br>практики OSINT</span><span data-lang="en">years of systematic<br>OSINT practice</span></div>
+      </div>
+      <div class="metric">
+        <div class="metric-val">1</div>
+        <div class="metric-lbl"><span data-lang="ru">год структурированного<br>изучения cybersec</span><span data-lang="en">year of structured<br>cybersec study</span></div>
+      </div>
+      <div class="metric">
+        <div class="metric-val">∞</div>
+        <div class="metric-lbl"><span data-lang="ru">проанализировано<br>цифровых следов</span><span data-lang="en">digital footprints<br>analysed</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="explore">
+  <p class="s-label">
+    <span data-lang="ru">Разделы сайта</span>
+    <span data-lang="en">Explore</span>
+  </p>
+  <div class="teaser-grid">
+    <a class="teaser-card" href="about.html">
+      <div class="teaser-ghost" aria-hidden="true">01</div>
+      <div class="teaser-tag"><span data-lang="ru">профиль</span><span data-lang="en">profile</span></div>
+      <div class="teaser-title"><span data-lang="ru">ОБО МНЕ</span><span data-lang="en">ABOUT</span></div>
+      <p class="teaser-desc"><span data-lang="ru">Полная биография, профессиональный путь, опыт по годам и подход к работе.</span><span data-lang="en">Full biography, professional timeline, year-by-year experience, and working methodology.</span></p>
+      <span class="teaser-arrow">↗</span>
+    </a>
+    <a class="teaser-card" href="services.html">
+      <div class="teaser-ghost" aria-hidden="true">02</div>
+      <div class="teaser-tag"><span data-lang="ru">прайс</span><span data-lang="en">rates</span></div>
+      <div class="teaser-title"><span data-lang="ru">УСЛУГИ</span><span data-lang="en">SERVICES</span></div>
+      <p class="teaser-desc"><span data-lang="ru">OSINT, Threat Intelligence, OPSEC и Information Security — полный прайс-лист.</span><span data-lang="en">OSINT, Threat Intelligence, OPSEC and Information Security — full rate card.</span></p>
+      <span class="teaser-arrow">↗</span>
+    </a>
+    <a class="teaser-card" href="contact.html">
+      <div class="teaser-ghost" aria-hidden="true">03</div>
+      <div class="teaser-tag"><span data-lang="ru">связь</span><span data-lang="en">reach out</span></div>
+      <div class="teaser-title"><span data-lang="ru">КОНТАКТ</span><span data-lang="en">CONTACT</span></div>
+      <p class="teaser-desc"><span data-lang="ru">Telegram, канал Internal Archive, Medium и GitHub.</span><span data-lang="en">Telegram, the Internal Archive channel, Medium and GitHub.</span></p>
+      <span class="teaser-arrow">↗</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <a href="index.html" class="footer-mark">ARISTCEL</a>
+    <div class="footer-sub">
+      OSINT RESEARCHER · CYBERSECURITY · INTELLIGENCE RESEARCH<br>
+      INTERNAL ARCHIVE · DEBIAN LINUX · CERTIFIED TO DIG<br>
+      © ARISTCEL — ALL RIGHTS RESERVED
+    </div>
+  </div>
+  <div class="footer-right">
+    <a href="about.html"><span data-lang="ru">ОБО МНЕ</span><span data-lang="en">ABOUT</span></a><br>
+    <a href="services.html"><span data-lang="ru">УСЛУГИ И ЦЕНЫ</span><span data-lang="en">SERVICES & RATES</span></a><br>
+    <a href="contact.html"><span data-lang="ru">КОНТАКТЫ</span><span data-lang="en">CONTACT</span></a><br>
+    <a href="https://github.com/aristcel" target="_blank" rel="noopener noreferrer">GITHUB</a>
+  </div>
+</footer>
+
+<script src="lang.js"></script>
+</body>
+</html>
