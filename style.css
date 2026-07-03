@@ -460,6 +460,9 @@ section:first-of-type { border-top: none; }
   background: var(--line);
   border: 1px solid var(--line);
 }
+.links-grid .link-tile:last-child {
+  grid-column: 1 / -1;
+}
 .link-tile {
   background: var(--card);
   display: flex;
@@ -670,9 +673,10 @@ section:first-of-type { border-top: none; }
   color: var(--mid);
   line-height: 1.6;
   padding-top: 16px;
+  margin-top: auto;
   border-top: 1px solid var(--line);
 }
-.package-for strong { color: rgba(255,255,255,0.65); font-weight: 400; }
+.package-for strong { color: var(--off-white); font-weight: 400; }
 
 .legal-note {
   display: flex;
